@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TM</title>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    background: url("rich (1).jpg") no-repeat center center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial, sans-serif;
+}
+
+/* Overlay خفيف عشان الايقونات تبان */
+body::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.55);
+    backdrop-filter: blur(2px);
+    z-index:0;
+}
+
+.container{
+    position:relative;
+    z-index:1;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+/* شكل الزرار */
+.social-btn{
+    width:280px;
+    height:70px;
+    border-radius:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    color:#c49a6c;
+    text-decoration:none;
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,0.2);
+    
+    background-image:url("rich (1).jpg");
+    background-size:cover;
+    background-attachment:fixed;
+    transition:0.4s;
+}
+
+/* كل زرار ياخد جزء مختلف من الصورة */
+.btn-x{ background-position:center 30%; }
+.btn-telegram{ background-position:center 50%; }
+.btn-instagram{ background-position:center 70%; }
+
+.social-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px rgba(196,154,108,0.7);
+    color:#fff;
+}
+
+/* Responsive للموبايل */
+@media(max-width:768px){
+    .social-btn{
+        width:220px;
+        height:60px;
+        font-size:24px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <a href="#" class="social-btn btn-x">
+        <i class="fa-brands fa-x-twitter"></i>
+    </a>
+
+    <a href="#" class="social-btn btn-telegram">
+        <i class="fa-brands fa-telegram"></i>
+    </a>
+
+    <a href="#" class="social-btn btn-instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+</div>
+
+</body>
+</html>
